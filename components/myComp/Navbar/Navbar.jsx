@@ -64,7 +64,7 @@ const Navbar = () => {
                   <NavigationMenuItem key={item.href}>
                     <NavigationMenuLink
                       href={item.href}
-                      className={navigationMenuTriggerStyle() + " text-black text-lg"}
+                      className={navigationMenuTriggerStyle() + "text-[#1f2937] hover:text-[#2563eb] transition-colors duration-200 text-lg font-medium"}
                     >
                       {item.label}
                     </NavigationMenuLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            <Button variant="default" size="sm">
+            <Button className="hover:bg-[#2563eb] bg-[#f59e0b] text-white font-medium px-4 py-2 rounded-md transition-colors duration-200" size="lg">
               Get in Touch
             </Button>
           </div>

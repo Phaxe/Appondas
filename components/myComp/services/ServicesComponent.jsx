@@ -26,11 +26,7 @@ const ServicesComponent = () => (
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, idx) => (
           <div key={idx} className="flex flex-col gap-8 items-center">
-            <Card
-              image={service.image}
-              title={service.title}
-              description={service.description}
-            />
+
             <Card2
               image={service.image}
               title={service.title}
