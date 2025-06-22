@@ -44,7 +44,7 @@ const Navbar = () => {
           <a
             key={item.href}
             href={item.href}
-            className="text-lg font-medium text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+            className="text-base sm:text-lg font-medium text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
             onClick={() => setIsOpen(false)}
           >
             {item.label}
@@ -77,7 +77,7 @@ const Navbar = () => {
                       href={item.href}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+                        "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-base sm:text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
                       )}
                     >
                       {item.label}
@@ -98,7 +98,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button  size="lg" className="p-0 text-[#0077B3] shadow-none border-2 border-[#F9D74D]">
+                <Button  size="sm" className="p-0 text-[#0077B3] shadow-none border-2 border-[#F9D74D]">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>

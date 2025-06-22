@@ -6,7 +6,7 @@ const OurWork = () => {
   return (
     <section className="py-12 md:py-24 bg-white ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-[#FF6F20] mb-12 md:mb-20">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#FF6F20] mb-12 md:mb-20">
           Our Work
         </h2>
         <div className="space-y-24">
@@ -23,7 +23,7 @@ const OurWork = () => {
               />
             </div>
             <div className="relative z-10 md:ml-auto w-full md:w-3/5 bg-[#e1e8f0] p-8 rounded-lg shadow-lg text-[#0077B3]">
-              <h3 className="text-2xl font-bold mb-4">Reservation Chat Bot</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Reservation Chat Bot</h3>
               <p className="mb-4">
                 A local hair salon in Prague receives hundreds of daily messages on Instagram and TikTok. Missed DMs mean lost bookings and lost revenue.
               </p>
@@ -45,7 +45,7 @@ const OurWork = () => {
               />
             </div>
             <div className="relative z-10 w-full md:w-3/5 bg-[#FFFDE7] text-[#B59B00] p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">AI Billing Tracking Solution</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">AI Billing Tracking Solution</h3>
               <p className="mb-4">
                 A children's dance studio in Spain struggled to track which parents missed monthly membership payments. The owner had no time to follow up, and many parents simply forgot to pay.
               </p>
@@ -67,7 +67,7 @@ const OurWork = () => {
               />
             </div>
             <div className="relative z-10 md:ml-auto w-full md:w-3/5 bg-[#FFF3E0] text-[#b14d17] p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">AI Inventory Management System using simple Camera</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">AI Inventory Management System using simple Camera</h3>
               <p className="mb-4">
                 A local supermarket struggled to track inventory and keep shelves full. Manual checks were time-consuming and often missed fast-selling items.
               </p>

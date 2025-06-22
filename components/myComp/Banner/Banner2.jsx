@@ -8,26 +8,26 @@ const Banner = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 text-white">
             Tech made simple
             <br />
             AI made useful
           </h1>
 
           {/* Subtitle */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6">
             Price made for you
           </h2>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
             Digital solutions tailored for small business, from websites to AI tools
           </p>
 
           {/* Call to Action Button */}
           <Button 
             size="lg" 
-            className="text-lg cursor-pointer px-8 py-6  bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="text-base sm:text-lg cursor-pointer px-8 py-6 h-auto bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Let's build together
           </Button>

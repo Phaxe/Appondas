@@ -4,18 +4,18 @@ import Card2 from "@/components/myComp/Banner/Card2";
 const services = [
   {
     image: "/Service1.png", // Replace with your image
-    title: "Service One",
-    description: "Description for service one goes here.",
+    title: "Custom Website Development",
+    description: "Beautifut tost websites tailored to your brend. We design from scratch and optimize existing sites.",
   },
   {
     image: "/Service2.png", // Replace with your image
-    title: "Service Two",
-    description: "Description for service two goes here.",
+    title: "AI-Powered Tools for All Businesses",
+    description: "We design smart bots and automation to hargle bookings, support, a admin tasks.",
   },
   {
     image: "/Service3.png", // Replace with your image
-    title: "Service Three",
-    description: "Description for service three goes here.",
+    title: "Al Integration & Data Solutions",
+    description: "We connect your data to powerfut Al platforms ii like Microsoft Coplior, Openni  and Google Al- without breaking yor bdget.",
   },
 ];
 

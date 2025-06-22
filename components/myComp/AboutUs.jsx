@@ -18,17 +18,17 @@ const AboutUs = () => (
     </div>
     {/* Content */}
     <div className="relative z-10 max-w-2xl mx-auto text-center text-white px-4">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Appondas</h2>
-      <p className="mb-2 text-lg">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">About Appondas</h2>
+      <p className="mb-2 text-base sm:text-lg">
         Appondas is dedicated to making technology accessible for everyone.
       </p>
-      <p className="mb-2 text-lg">
+      <p className="mb-2 text-base sm:text-lg">
         We specialize in digital solutions for small businesses.
       </p>
-      <p className="mb-2 text-lg">
+      <p className="mb-2 text-base sm:text-lg">
         From custom websites to powerful AI tools, we help you grow.
       </p>
-      <p className="mb-6 text-lg">
+      <p className="mb-6 text-base sm:text-lg">
         Our mission is to simplify tech and make AI truly useful for you.
       </p>
       <Button

@@ -19,10 +19,10 @@ const Card = ({ image, title, description }) => {
         </div>
       )}
       <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-xl font-bold mb-2 text-center bg-gradient-to-r from-blue-700 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
+        <h3 className="text-lg sm:text-xl font-bold mb-2 text-center bg-gradient-to-r from-blue-700 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
           {title}
         </h3>
-        <p className="text-gray-600 text-base text-center flex-1">
+        <p className="text-gray-600 text-sm sm:text-base text-center flex-1">
           {description}
         </p>
       </div>
