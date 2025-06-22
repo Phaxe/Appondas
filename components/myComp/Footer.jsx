@@ -17,7 +17,7 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <footer className="w-full bg-white border-t py-6 px-0">
+  <footer className="w-full bg-gray-200 border-t border-[#FF6F20] py-6 px-0">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       {/* Logo */}
       <div className="flex items-center md:order-1 order-1 md:w-auto justify-center md:justify-start min-w-[120px]">

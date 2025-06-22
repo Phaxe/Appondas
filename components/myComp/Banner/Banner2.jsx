@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Banner = () => {
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-r from-blue-500 via-blue-950 to-orange-400">
+    <section className="relative py-20 lg:py-32 bg-gradient-to-r from-[#FF6F20] via-[#006192] to-[#FFB74D]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
@@ -27,7 +27,7 @@ const Banner = () => {
           {/* Call to Action Button */}
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-blue-500  to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Let's build together
           </Button>

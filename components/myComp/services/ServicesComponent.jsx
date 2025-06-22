@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "@/components/myComp/Banner/Card";
 import Card2 from "@/components/myComp/Banner/Card2";
 
 const services = [
@@ -24,7 +23,7 @@ const ServicesComponent = () => (
   <section className="py-12 bg-white">
     <div className="container mx-auto px-4">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, idx) => (
+        {services.map((service, idx) => ( 
           <div key={idx} className="flex flex-col gap-8 items-center">
 
             <Card2

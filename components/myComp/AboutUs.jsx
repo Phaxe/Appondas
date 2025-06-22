@@ -31,9 +31,12 @@ const AboutUs = () => (
       <p className="mb-6 text-lg">
         Our mission is to simplify tech and make AI truly useful for you.
       </p>
-      <Button size="lg" className="bg-white text-black font-semibold hover:bg-gray-200">
-        Learn More
-      </Button>
+      <Button
+              className="hover:bg-[#0077B3] border-white border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-2 rounded-md transition-colors duration-200"
+              size="lg"
+            >
+              Learn More
+            </Button>
     </div>
   </section>
 );
