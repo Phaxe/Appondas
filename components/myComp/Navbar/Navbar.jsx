@@ -52,7 +52,7 @@ const Navbar = () => {
         ))}
         <Button 
           variant="default" 
-          className=" mt-4 hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-4 py-2 rounded-md transition-colors duration-200"
+          className=" mt-4 hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-6 py-3 rounded-md transition-colors duration-200"
         >
           Get in Touch
         </Button>
@@ -87,7 +87,7 @@ const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
             <Button
-              className="hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-4 py-2 rounded-md transition-colors duration-200"
+              className="hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-4 rounded-md transition-colors duration-200"
               size="lg"
             >
               Get in Touch

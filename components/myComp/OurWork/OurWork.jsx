@@ -82,7 +82,7 @@ const OurWork = () => {
 
    
             <Button
-              className="bg-[#0077B3] shadow-xl hover:border-[#0077B3] hover:text-[#0077B3] text-  border-2 border-[#FFB74D]  hover:bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-2 rounded-md transition-colors duration-200"
+              className="bg-[#0077B3] shadow-xl hover:border-[#0077B3] hover:text-[#0077B3]  border-2 border-[#FFB74D]  hover:bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-5  rounded-md transition-colors duration-200"
               size="lg"
             >
                  Let's build together

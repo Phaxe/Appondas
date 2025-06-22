@@ -32,7 +32,7 @@ const AboutUs = () => (
         Our mission is to simplify tech and make AI truly useful for you.
       </p>
       <Button
-              className="hover:bg-[#0077B3] border-white border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-2 rounded-md transition-colors duration-200"
+              className="hover:bg-[#0077B3] border-white border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-4  rounded-md transition-colors duration-200"
               size="lg"
             >
               Learn More
