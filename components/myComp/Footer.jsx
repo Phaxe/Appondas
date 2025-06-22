@@ -17,7 +17,7 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <footer className="w-full bg-gray-200 border-t border-[#FF6F20] py-6 px-0">
+  <footer className="w-full bg-[#FAFAFA] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] py-6 px-0">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       {/* Logo */}
       <div className="flex items-center md:order-1 order-1 md:w-auto justify-center md:justify-start min-w-[120px]">
@@ -25,10 +25,13 @@ const Footer = () => (
       </div>
       {/* Navigation Links */}
       <nav className="flex-1 flex justify-center md:order-2 order-3 w-full">
-        <ul className="flex flex-wrap justify-center gap-6 text-gray-700 font-medium">
+        <ul className="flex flex-wrap justify-center gap-6 text-[#0077B3] font-medium">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="hover:text-primary transition-colors">
+              <Link 
+                href={link.href} 
+                className="hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+              >
                 {link.label}
               </Link>
             </li>
@@ -44,7 +47,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="text-gray-500 hover:text-primary transition-colors"
+            className="text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200"
           >
             <Icon className="h-5 w-5" />
           </a>

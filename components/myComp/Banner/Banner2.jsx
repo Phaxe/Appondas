@@ -27,7 +27,7 @@ const Banner = () => {
           {/* Call to Action Button */}
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="text-lg cursor-pointer px-8 py-6 h-auto bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Let's build together
           </Button>

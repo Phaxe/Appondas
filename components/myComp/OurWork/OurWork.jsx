@@ -22,7 +22,7 @@ const OurWork = () => {
                 className="rounded-lg shadow-xl transform group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="relative z-10 md:ml-auto w-full md:w-3/5 bg-[#eff6ff] p-8 rounded-lg shadow-lg text-[#0077B3]">
+            <div className="relative z-10 md:ml-auto w-full md:w-3/5 bg-[#e1e8f0] p-8 rounded-lg shadow-lg text-[#0077B3]">
               <h3 className="text-2xl font-bold mb-4">Reservation Chat Bot</h3>
               <p className="mb-4">
                 A local hair salon in Prague receives hundreds of daily messages on Instagram and TikTok. Missed DMs mean lost bookings and lost revenue.
@@ -82,7 +82,7 @@ const OurWork = () => {
 
    
             <Button
-              className="bg-[#0077B3] border-white border-2 hover:bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-2 rounded-md transition-colors duration-200"
+              className="bg-[#0077B3] shadow-xl hover:border-[#0077B3] hover:text-[#0077B3] text-  border-2 border-[#FFB74D]  hover:bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-2 rounded-md transition-colors duration-200"
               size="lg"
             >
                  Let's build together
@@ -92,5 +92,6 @@ const OurWork = () => {
       </section>
   );
 };
+
 
 export default OurWork;

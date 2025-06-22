@@ -68,16 +68,16 @@ const Navbar = () => {
             <Image src="/logo.png" alt="Logo" width={180} height={100} />
           </div>
           {/* Left side - Navigation Links and Button (Desktop) */}
-          <div className="hidden md:flex items-center space-x-8 gap-5">
+          <div className="hidden md:flex items-center gap-20">
             <NavigationMenu>
-              <NavigationMenuList>
+              <NavigationMenuList className="flex gap-8">
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.href}>
                     <NavigationMenuLink
                       href={item.href}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+                        "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
                       )}
                     >
                       {item.label}
