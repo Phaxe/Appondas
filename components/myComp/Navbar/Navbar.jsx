@@ -26,7 +26,26 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { href: "/services", label: "Services" },
+    {
+      label: "Services",
+      href: "/services",
+      dropdown: [
+        { label: "Service 1", href: "/services/service1" },
+        { label: "Service 2", href: "/services/service2" },
+        { label: "Service 3", href: "/services/service3" },
+        { label: "Service 4", href: "/services/service4" },
+      ],
+    },
+    {
+      label: "Products",
+      href: "/products",
+      dropdown: [
+        { label: "Product 1", href: "/products/product1" },
+        { label: "Product 2", href: "/products/product2" },
+        { label: "Product 3", href: "/products/product3" },
+        { label: "Product 4", href: "/products/product4" },
+      ],
+    },
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
   ];
@@ -40,16 +59,40 @@ const Navbar = () => {
       
       {/* Navigation links with consistent alignment and hover effects */}
       <div className="flex flex-col space-y-4 w-full">
-        {navigationItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="text-base sm:text-lg font-medium text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
-            onClick={() => setIsOpen(false)}
-          >
-            {item.label}
-          </a>
-        ))}
+        {navigationItems.map((item) =>
+          item.dropdown ? (
+            <div key={item.label} className="w-full">
+              <details className="group">
+                <summary className="cursor-pointer text-base sm:text-lg font-medium text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full flex items-center justify-between">
+                  {item.label}
+                  <span className="ml-2">▼</span>
+                </summary>
+                <ul className="pl-4 mt-2 flex flex-col gap-2">
+                  {item.dropdown.map((sub) => (
+                    <li key={sub.href}>
+                      <a
+                        href={sub.href}
+                        className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {sub.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </div>
+          ) : (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-base sm:text-lg font-medium text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </a>
+          )
+        )}
         <Button 
           variant="default" 
           className=" mt-4 hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-6 py-3 rounded-md transition-colors duration-200"
@@ -61,29 +104,75 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Image src="/logo.png" alt="Logo" width={180} height={100} />
+          {/* Mobile: Burger left, Logo right; Desktop: unchanged */}
+          <div className="flex items-center w-full justify-between md:justify-start">
+            {/* Burger menu (mobile only) */}
+            <div className="md:hidden order-1">
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button  size="sm" className="p-0 text-[#0077B3] shadow-none border-2 border-[#F9D74D]">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white [&>button]:text-[#0077B3] [&>button]:hover:text-[#FFB74D] [&>button>svg]:h-8 [&>button>svg]:w-8">
+                  <div className="mt-2">
+                    <MobileNav />
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
+            {/* Logo */}
+            <div className="flex items-center order-2 ml-auto md:ml-0">
+              <Image src="/logo.png" alt="Logo" width={180} height={100} />
+            </div>
           </div>
           {/* Left side - Navigation Links and Button (Desktop) */}
-          <div className="hidden md:flex items-center gap-20">
-            <NavigationMenu>
+          <div className="hidden md:flex items-center gap-20 z-50">
+            <NavigationMenu viewport={false}>
               <NavigationMenuList className="flex gap-8">
-                {navigationItems.map((item) => (
-                  <NavigationMenuItem key={item.href}>
-                    <NavigationMenuLink
-                      href={item.href}
-                      className={cn(
-                        navigationMenuTriggerStyle(),
-                        "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-base sm:text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
-                      )}
-                    >
-                      {item.label}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
+                {navigationItems.map((item) =>
+                  item.dropdown ? (
+                    <NavigationMenuItem key={item.label}>
+                      <NavigationMenuTrigger
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-base sm:text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+                        )}
+                      >
+                        {item.label}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent className="bg-white shadow-lg rounded-md p-4 min-w-[180px] z-[100]">
+                        <ul className="flex flex-col gap-2">
+                          {item.dropdown.map((sub) => (
+                            <li key={sub.href}>
+                              <a
+                                href={sub.href}
+                                className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded"
+                              >
+                                {sub.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ) : (
+                    <NavigationMenuItem key={item.href}>
+                      <NavigationMenuLink
+                        href={item.href}
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "text-[#0077B3] hover:text-[#FFB74D] transition-colors p-0 duration-200 text-base sm:text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#0077B3] after:transition-all after:duration-300 after:ease-out hover:after:w-full"
+                        )}
+                      >
+                        {item.label}
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  )
+                )}
               </NavigationMenuList>
             </NavigationMenu>
             <Button
@@ -93,24 +182,6 @@ const Navbar = () => {
               Get in Touch
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button  size="sm" className="p-0 text-[#0077B3] shadow-none border-2 border-[#F9D74D]">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-white [&>button]:text-[#0077B3] [&>button]:hover:text-[#FFB74D] [&>button>svg]:h-8 [&>button>svg]:w-8">
-                <div className="mt-2">
-                  <MobileNav />
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-
-          {/* Right side - Logo */}
         </div>
       </div>
     </nav>

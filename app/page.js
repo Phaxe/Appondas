@@ -5,12 +5,14 @@ import ServicesComponent from "@/components/myComp/services/ServicesComponent";
 import AboutUs from "@/components/myComp/AboutUs";
 import Footer from "@/components/myComp/Footer";
 import OurWork from "@/components/myComp/OurWork/OurWork";
+import Companies from "@/components/myComp/Companies";
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Navbar />
       <Banner2 />
       <ServicesComponent />
+      <Companies/>
       <AboutUs />
       <OurWork />
       <Footer />
