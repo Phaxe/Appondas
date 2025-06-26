@@ -18,7 +18,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -30,20 +30,19 @@ const Navbar = () => {
       label: "Services",
       href: "/services",
       dropdown: [
-        { label: "Service 1", href: "/services/service1" },
-        { label: "Service 2", href: "/services/service2" },
-        { label: "Service 3", href: "/services/service3" },
-        { label: "Service 4", href: "/services/service4" },
+        { label: "Custom AI Tool", href: "/services/custom-ai-tool" },
+        { label: "AI Consultant", href: "/services/ai-consultant" },
+        { label: "AI Integration", href: "/services/ai-integration" },
       ],
     },
     {
       label: "Products",
       href: "/products",
       dropdown: [
-        { label: "Product 1", href: "/products/product1" },
-        { label: "Product 2", href: "/products/product2" },
-        { label: "Product 3", href: "/products/product3" },
-        { label: "Product 4", href: "/products/product4" },
+        { label: "Chatbot", href: "/products/chatbot" },
+        { label: "Billing System", href: "/products/billing-system" },
+        { label: "Inventory Trading", href: "/products/inventory-trading" },
+        { label: "Custom", href: "/products/custom" },
       ],
     },
     { href: "/about", label: "About" },
@@ -72,9 +71,10 @@ const Navbar = () => {
                     <li key={sub.href}>
                       <a
                         href={sub.href}
-                        className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded"
+                        className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded flex items-center gap-2 text-sm"
                         onClick={() => setIsOpen(false)}
                       >
+                        <ArrowRight className="w-4 h-4" />
                         {sub.label}
                       </a>
                     </li>
@@ -150,8 +150,9 @@ const Navbar = () => {
                             <li key={sub.href}>
                               <a
                                 href={sub.href}
-                                className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded"
+                                className="block px-2 py-1 text-[#0077B3] hover:text-[#FFB74D] transition-colors duration-200 rounded flex items-center gap-2 text-sm"
                               >
+                                <ArrowRight className="w-4 h-4" />
                                 {sub.label}
                               </a>
                             </li>
