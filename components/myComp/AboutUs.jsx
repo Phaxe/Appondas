@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const AboutUs = () => (
   <section className="relative w-full min-h-[400px] flex items-center justify-center py-16 overflow-hidden">
@@ -36,6 +37,7 @@ const AboutUs = () => (
               size="lg"
             >
               Learn More
+              <ArrowRight className="w-4 h-4" />
             </Button>
     </div>
   </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Handshake } from 'lucide-react';
 
 const OurWork = () => {
   return (
@@ -86,6 +87,7 @@ const OurWork = () => {
               size="lg"
             >
                  Let's build together
+                 <Handshake className="w-5 h-5" />
             </Button>
           </div>
         </div>

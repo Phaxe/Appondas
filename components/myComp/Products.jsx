@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Products = () => {
   const products = [
-    { title: 'Chat Bot', description: 'Intelligent conversational AI solutions' },
-    { title: 'Billing Tracking', description: 'Comprehensive billing and payment management' },
-    { title: 'Inventory Trading', description: 'Advanced inventory and trading systems' },
-    { title: 'Custom', description: 'Tailored solutions for your specific needs' }
+    { title: 'Chat Bot', description: 'Intelligent conversational AI solutions', image: '/bot.png' },
+    { title: 'Billing Tracking', description: 'Comprehensive billing and payment management', image: '/bills.png' },
+    { title: 'Inventory Trading', description: 'Advanced inventory and trading systems', image: '/inventory.png' },
+    { title: 'Custom', description: 'Tailored solutions for your specific needs', image: '/custome.png' }
   ];
 
   return (
@@ -26,8 +27,9 @@ const Products = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200"
             >
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-[#0077B3] mb-3">
+              <div className="text-center flex flex-col items-center">
+                <Image src={product.image} alt={product.title} width={64} height={64} className="mb-3" />
+                <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-700 via-yellow-600 to-orange-600 bg-clip-text text-transparent mb-3">
                   {product.title}
                 </h3>
                 <p className="text-gray-600 text-sm">

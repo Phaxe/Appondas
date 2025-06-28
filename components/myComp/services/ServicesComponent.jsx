@@ -22,6 +22,9 @@ const services = [
 const ServicesComponent = () => (
   <section className="py-12 bg-gray-100">
     <h1 className="text-center text-4xl font-bold text-[#0077B3] mb-5 ">Services</h1>
+    <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8 text-base">
+      Discover our range of digital solutions, from custom websites to powerful AI tools, designed to help your business grow and succeed.
+    </p>
     <div className="container mx-auto px-4">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, idx) => ( 

@@ -18,7 +18,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -98,6 +98,7 @@ const Navbar = () => {
           className=" mt-4 hover:bg-[#0077B3] border-[#0077B3] border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-6 py-3 rounded-md transition-colors duration-200"
         >
           Get in Touch
+          <MessageCircle className="w-4 h-4" />
         </Button>
       </div>
     </div>
@@ -181,6 +182,7 @@ const Navbar = () => {
               size="lg"
             >
               Get in Touch
+              <MessageCircle className="w-4 h-4" />
             </Button>
           </div>
         </div>

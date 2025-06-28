@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Rocket } from "lucide-react";
 
 const Banner = () => {
   return (
@@ -30,6 +31,7 @@ const Banner = () => {
             className=" text-base sm:text-lg cursor-pointer px-8 py-6 h-auto bg-gradient-to-r from-blue-500 border-2 to-orange-500 hover:from-blue-500 hover:to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Let's build together
+            <Rocket className="w-5 h-5" />
           </Button>
         </div>
       </div>
