@@ -20,7 +20,7 @@ const services = [
 ];
 
 const ServicesComponent = () => (
-  <section className="py-12 bg-white">
+  <section className="py-12 bg-gray-100">
     <h1 className="text-center text-4xl font-bold text-[#0077B3] mb-5 ">Services</h1>
     <div className="container mx-auto px-4">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

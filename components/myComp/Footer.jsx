@@ -39,7 +39,7 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <footer className="w-full bg-[#FAFAFA] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] py-12 px-0">
+  <footer className="w-full bg-[#e1e8f0] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] py-12 px-0">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Logo and Social Media */}

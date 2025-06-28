@@ -12,7 +12,7 @@ const companyLogos = [
 
 const Companies = () => {
   return (
-    <div className="w-full overflow-hidden py-8 bg-gray-100 shadow">
+    <div className="w-full overflow-hidden py-8 bg-white shadow">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0077B3] mb-8">Integration Partners</h2>
       <div className="relative w-full">
         <div className="flex items-center whitespace-nowrap animate-company-slider w-max">
