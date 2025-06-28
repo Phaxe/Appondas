@@ -24,6 +24,14 @@ const servicesLinks = [
   { label: "AI Integration", href: "/services/ai-integration" },
 ];
 
+const companyLinks = [
+  { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
+  { label: "Contact", href: "/contact" },
+  { label: "Blog", href: "/blog" },
+  { label: "Legal", href: "/legal" },
+];
+
 const socialLinks = [
   { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
   { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
@@ -33,7 +41,7 @@ const socialLinks = [
 const Footer = () => (
   <footer className="w-full bg-[#FAFAFA] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] py-12 px-0">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Logo and Social Media */}
         <div className="flex flex-col items-center text-center">
           <div className="mb-6">
@@ -91,6 +99,23 @@ const Footer = () => (
           <h3 className="text-lg font-semibold text-[#0077B3] mb-4">Services</h3>
           <ul className="space-y-2 pl-4">
             {servicesLinks.map((link) => (
+              <li key={link.href}>
+                <Link 
+                  href={link.href} 
+                  className="text-gray-400 hover:text-[#FFB74D] transition-colors duration-200"
+                >
+                  - {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div className="text-left">
+          <h3 className="text-lg font-semibold text-[#0077B3] mb-4">Company</h3>
+          <ul className="space-y-2 pl-4">
+            {companyLinks.map((link) => (
               <li key={link.href}>
                 <Link 
                   href={link.href} 
