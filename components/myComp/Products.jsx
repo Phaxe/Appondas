@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const Products = () => {
   const products = [
@@ -38,6 +41,14 @@ const Products = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Link href="/products">
+            <Button size="lg" className="hover:bg-[#0077B3] border-white border-2 bg-[#FFB74D] cursor-pointer text-white font-medium px-8 py-4  rounded-md transition-colors duration-200">
+              View All Products
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
